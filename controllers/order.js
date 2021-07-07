@@ -15,46 +15,46 @@ exports.getOrderById = (req, res, next, id) => {
 }
 
 //my main code...
-// exports.createOrder = (req, res) => {
-//     //see order model..user field is populted
-//     req.body.order.user = req.profile //req.profile populated by getUserById
-//     const order = new Order(req.body.order);
-//     order.save((err, order) => {
-//         if(err){
-//             return res.status(400).json({
-//                 error: "Failed to save your order in DB"
-//             });
-//         }
-//         res.json(order);
-//     });
-// };
+exports.createOrder = (req, res) => {
+    //see order model..user field is populted
+    req.body.order.user = req.profile //req.profile populated by getUserById
+    const order = new Order(req.body.order);
+    order.save((err, order) => {
+        if(err){
+            return res.status(400).json({
+                error: "Failed to save your order in DB"
+            });
+        }
+        res.json(order);
+    });
+};
 
 //=================================`
 //got from codeshare...https://codeshare.io/24z3kL
-exports.createOrder = (req, res) => {
-    try{
+// exports.createOrder = (req, res) => {
+//     try{
     
-    req.body.order.user = req.profile;
-      console.log(req.body.order)
+//     req.body.order.user = req.profile;
+//       console.log(req.body.order)
   
-    const order = new Order(req.body.order);
-    console.log(order)
-    order.save((err, order) => {
-    console.log(err)
+//     const order = new Order(req.body.order);
+//     console.log(order)
+//     order.save((err, order) => {
+//     console.log(err)
   
-      if (err || !order) {
-        return res.status(400).json({
-          error: "Failed to save your order in DB"
-        });
-      }
-      res.json(order);
-    });
-    }
+//       if (err || !order) {
+//         return res.status(400).json({
+//           error: "Failed to save your order in DB"
+//         });
+//       }
+//       res.json(order);
+//     });
+//     }
     
-    catch(err){
-    console.log(err)
-    }
-  };
+//     catch(err){
+//     console.log(err)
+//     }
+//   };
 
 exports.getAllOrders = (req, res) => {
     Order.find()

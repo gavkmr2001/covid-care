@@ -7,7 +7,7 @@ const bodyParser = require("body-parser")
 const cookieParser= require("cookie-parser")
 const cors= require("cors");
 const path = require('path') //added later...freecodecamp
-require('./database'); //added later...freecodecamp
+// require('./database'); //added later...freecodecamp
 
 //tells to bring contnent from the given address
 const authRoutes = require("./routes/auth") //auth.js
@@ -20,33 +20,19 @@ const paymentBRoutes = require("./routes/paymentBRoutes");
 
 
 // //DB connectionssss
-// var url= process.env.DATABASE || process.env.DATABASEURL //databaseurl from heroku website
-// // var url= process.env.DATABASEURL
-// mongoose
-//     .connect(url,{ //process is where it attaches all the new dependencies
-//         //.env is the file that we created
-//         //DATABASE is the name of variable in .env file
-//         useNewUrlParser: true,
-//         useUnifiedTopology: true,
-//         useCreateIndex: true
-//     }).then(() => {
-//         console.log("DB CONNECTED");
-//     }).catch(console.log("DB GOT OOOPSS"));
+var url= process.env.DATABASE || process.env.DATABASEURL //databaseurl from heroku website
+// var url= process.env.DATABASEURL
+mongoose
+    .connect(url,{ //process is where it attaches all the new dependencies
+        //.env is the file that we created
+        //DATABASE is the name of variable in .env file
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+        useCreateIndex: true
+    }).then(() => {
+        console.log("DB CONNECTED");
+    }).catch(console.log("DB GOT OOOPSS"));
 
-
-
-    
-    // mongoose
-    //     .connect(process.env.DATABASE,{ //process is where it attaches all the new dependencies
-    //         //.env is the file that we created
-    //         //DATABASE is the name of variable in .env file
-    //         useNewUrlParser: true,
-    //         useUnifiedTopology: true,
-    //         useCreateIndex: true
-    //     }).then(() => {
-    //         console.log("DB CONNECTED");
-    //     });
-        //.catch(console.log("DB GOT OOOPSS"));
     
 //Middlewares---------------------
     app.use(bodyParser.urlencoded());
