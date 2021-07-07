@@ -68,7 +68,7 @@ app.use("/api", paymentBRoutes);
 if(process.env.NODE_ENV === 'production'){
     app.use(express.static("projfrontend/build"));
     app.get('/*', (req,res) => {
-        res.sendFile(path.resolve(_dirname, 'projfrontend', 'build','index.html'))
+        res.sendFile(path.resolve(__dirname, 'projfrontend', 'build','index.html'))
     });
 }
 
