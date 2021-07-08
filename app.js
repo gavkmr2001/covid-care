@@ -20,7 +20,7 @@ const paymentBRoutes = require("./routes/paymentBRoutes");
 
 
 // //DB connectionssss
-var url= process.env.DATABASE || process.env.DATABASEURL //databaseurl from heroku website
+var url= process.env.DATABASEURL //databaseurl from heroku website
 // var url= process.env.DATABASEURL
 mongoose
     .connect(url,{ //process is where it attaches all the new dependencies
