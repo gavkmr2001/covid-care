@@ -18,14 +18,14 @@ const Base = ({
         </div>
         <footer className="footer bg-dark mt-auto py-3">
             <div className="container-fluid bg-success text-white text-center py-3">
-                <h4>ask any doubts</h4>
+                <h4>Facing any problem ? </h4>
                 <button className="btn btn-warning btn-lg">
                     Contact Us
                 </button>
             </div>
             <div className="container">
                 <span className="text-muted">
-                    An amazing <span className="text-white">MERN</span> bootcamp
+                    A <span className="text-white">COVID</span> initiative
                 </span>
             </div>
         </footer>

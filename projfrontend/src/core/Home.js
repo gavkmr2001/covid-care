@@ -32,12 +32,12 @@ export default function Home() {
     // can overwrite value given in Base
       <Base title="Home page" description="Welcome to the home page">
         <div className="row text-center">
-          <h1 className="text-white">All of tshirts</h1>
+          <h1 className="text-white">All Products</h1>
           <div className="row">
             {products && products.map((product, index) => {
               return(
                 //repeat itself ...
-                <div key={index} className="col-4 mb-4">
+                <div key={index} className="col-md-4 mb-4">
                   <Card product={product}  /> 
                 </div>
               )
