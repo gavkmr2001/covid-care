@@ -76,8 +76,8 @@ const AdminDashboard = () => {
             className = "container bg-success p-3 mb-0"
         >
             <div className="row">
-                <div className="col-3">{adminLeftSide()}</div>
-                <div className="col-9"> {adminRightSide()}</div>
+                <div className="col-md-3">{adminLeftSide()}</div>
+                <div className="col-md-9"> {adminRightSide()}</div>
             </div>         
         </Base>
     )

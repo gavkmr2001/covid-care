@@ -53,14 +53,14 @@ const  Cart = () => {
     // can overwrite value given in Base
       <Base title="Cart page" description="Ready to checkout">
         <div className="row text-center">
-            <div className="col-6">
+            <div className="col-md-6">
                 {products.length >0 ? (
                     loadAllProducts(products)
                     ): (
                     <h3>No Products in Cart</h3>
                 )}
             </div>
-            <div className="col-6">
+            <div className="col-md-6">
                 <Paymentb products={products} setReload = {setReload} />
             </div>
         </div>

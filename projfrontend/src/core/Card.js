@@ -67,11 +67,11 @@ const Card = ({
     
     return (
       <div className="card text-white bg-dark border border-info ">
-        <div className="card-header lead text-uppercase">{cartTitle}</div>
+        <div className="card-header lead font-weight-normal text-uppercase">{cartTitle}</div>
         <div className="card-body">
           {getARedirect(redirect)}
           <ImageHelper product= {product} />
-          <p className="lead bg-success font-weight-normal text-wrap">
+          <p className="lead bg-dark font-weight-normal text-wrap">
             {cartDescription}
           </p>
           <p className="btn btn-success rounded  btn-sm px-4">$ {cartPrice}</p>
