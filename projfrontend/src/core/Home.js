@@ -30,7 +30,7 @@ export default function Home() {
 
   return (
     // can overwrite value given in Base
-      <Base title="Home page" description="Welcome to the home page">
+      <Base title="Covid Care" description="Accessories Store">
         <div className="row text-center">
           <h1 className="text-white">All Products</h1>
           <div className="row">
