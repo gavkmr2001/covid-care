@@ -66,8 +66,8 @@ const Card = ({
     
     
     return (
-      <div className="card text-white bg-dark border border-info ">
-        <div className="card-header lead font-weight-normal text-uppercase">{cartTitle}</div>
+      <div className="card text-white  border border-info ">
+        <div className="card-header text-dark lead font-weight-normal text-uppercase">{cartTitle}</div>
         <div className="card-body">
           {getARedirect(redirect)}
           <ImageHelper product= {product} />

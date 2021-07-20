@@ -32,7 +32,7 @@ export default function Home() {
     // can overwrite value given in Base
       <Base title="Covid Care" description="Accessories Store">
         <div className="row text-center">
-          <h1 className="text-white">All Products</h1>
+          <h1 className="text-dark">All Products</h1>
           <div className="row">
             {products && products.map((product, index) => {
               return(
