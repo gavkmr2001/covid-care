@@ -47,7 +47,6 @@ const ManageCategories = () => {
             <h2 className="mb-4">All categories:</h2>
             <div className="row">
                 <div className="col-12">
-                    <h2 className="text-center text-white my-3">Total 3 categories</h2>
                     { categories.map((category, index) => {
                         //console.log(category)
                         return (
