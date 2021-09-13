@@ -4,18 +4,12 @@ import { isAuthenticated } from '../auth/helper';
 import Base from '../core/Base';
 import {createCategory} from './helper/adminapicall';
 
-
-
 const AddCategory = () => {
-
     //state
     const [name, setName ] = useState("");
     const [error, setError ] = useState(false);
     const [success, setSuccess ] = useState(false);
-   
-
     const {user, token} = isAuthenticated();
-
 
     const goBack = () => ( //curly bracket require return
         <div className="mt-5">
@@ -24,7 +18,6 @@ const AddCategory = () => {
             </Link>
         </div>
     );
-
 
     const handleChange= (event) => {
         setError("");

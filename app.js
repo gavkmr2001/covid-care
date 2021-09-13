@@ -58,20 +58,13 @@ if(process.env.NODE_ENV === 'production'){
     });
 }
 
-//freecodecamp 
-// app.use(express.static(path.join(__dirname, '../build')))
-// app.get('*', (req, res) => {
-//     res.sendFile(path.join(__dirname, '../build'))
-// })
-
-
 //prefixing /api in front of all  the routes. ==> http://localhost:8000/api/signout
 
 
 //------------------PORT-------------
 //.env file is not uploaded on github so we can 
 // keep sensititve info there 
- const port = process.env.PORT || 8000;
+ const port = process.env.PORT || 7000;
 
  //STARTING A SERVER---------------
  app.listen(port, () => {

@@ -11,16 +11,9 @@ const UpdateCategory = ({match}) => {
 
 
     const [values, setValues ] = useState({
-        // name: "",
-        // description: "",
-        // price: "",
-        // stock: "",
-        // photo: "",
-        // categories: [],
         category: "",
         loading: false,
         error: "",
-        //createdProduct: "",
         getaRedirect: false,
         formData: ""
     });
@@ -54,12 +47,6 @@ const UpdateCategory = ({match}) => {
       } , []);
 
 
-    // const handleChange= name => event => {
-    // const value= event.target.value 
-    // formData.set(name, value); //set form with its name and values
-    // setValues({...values, [name]: value})
-    // };
-
     const handleChange= name => event => {
         const value= event.target.value 
         formData.set(name, value); //set form with its name and values
@@ -86,23 +73,14 @@ const UpdateCategory = ({match}) => {
         } else{
           setValues({
             ...values,
-            //name:"",
-            // description: "",
-            // price: "",
-            // photo:"",
-            // stock: "",
             category: data.name,
             loading:false,
-            //createdProduct: data.name
-            // getaRedirect: true
           })
         }
       })
     } 
 
     
-
-
     const myCategoryForm = () => (
         <form>
             <div className="form-group">
